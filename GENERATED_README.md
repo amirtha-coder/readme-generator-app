@@ -1,10 +1,3 @@
-<!--
- Copyright (c) 2022 amirthamuthirulandi
-
- This software is released under the MIT License.
- https://opensource.org/licenses/MIT
--->
-
 # PROJECT-TITLE ![MIT](https://img.shields.io/badge/MIT-License-green)
 
 ## Contents Table
@@ -25,17 +18,13 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 Please follow the instructions below:
 
-```
-npm install
-```
+
 
 ## Usage
 
 Please follow the instructions below:
 
-```
-npm run start
-```
+
 
 ## License
 
@@ -49,9 +38,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 Please follow the instructions below:
 
-```
-npm run test
-```
 
 ## Questions
 
