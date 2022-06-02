@@ -1,0 +1,20 @@
+{
+  "name": "readme-generator-app",
+  "version": "1.0.0",
+  "description": "A README.md generator for devs to quickly implement into a new project achieved by Node.JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirtha-coder/readme-generator-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirtha-coder/readme-generator-app/issues"
+  },
+  "homepage": "https://github.com/amirtha-coder/readme-generator-app#readme"
+}
