@@ -6,6 +6,7 @@
 
 // import inquirer
 const inquirer = require("inquirer");
+const fs = require("fs");
 
 // declare questions
 const questions = [
@@ -60,6 +61,54 @@ const questions = [
     name: "username",
   },
 ];
+
+const readme = `# PROJECT-TITLE ![MIT](https://img.shields.io/badge/MIT-License-green)
+
+## Contents Table
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributions](#contributions)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Description
+
+
+## Installation
+
+Please follow the instructions below:
+
+``````
+
+## Usage
+
+Please follow the instructions below:
+
+``````
+
+## License
+
+MIT License
+
+## Contributions
+
+
+
+## Tests
+
+Please follow the instructions below:
+
+``````
+
+## Questions
+
+- Please contact me on my email: myemail@email.com
+
+- Visit my GitHub profile [here](https://github.com/amirtha-coder)
+`;
 
 // prompt questions
 const init = async () => {
