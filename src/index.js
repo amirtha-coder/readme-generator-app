@@ -12,6 +12,11 @@ const fs = require("fs");
 const questions = [
   {
     type: "input",
+    message: "Please enter project name",
+    name: "title",
+  },
+  {
+    type: "input",
     message: "Please enter a description",
     name: "description",
   },
@@ -68,27 +73,31 @@ const init = async () => {
   // prompt questions to get answers
   const readMEGenerate = [];
   const {
+    title,
     description,
     installation,
     usage,
     license,
     contributions,
+    tests,
     email,
     username,
   } = await inquirer.prompt(questions);
 
   readMEGenerate.push({
+    title,
     description,
     installation,
     usage,
     license,
     contributions,
+    tests,
     email,
     username,
   });
   console.log(readMEGenerate);
 
-  const readME = `# PROJECT-TITLE ![MIT](https://img.shields.io/badge/MIT-License-green)
+  const readME = `#${readMEGenerate[0].title}![MIT](https://img.shields.io/badge/${readMEGenerate[0].license}-License-green)
 
 ## Contents Table
 
@@ -102,38 +111,38 @@ const init = async () => {
 
 ## Description
 
-
+${readMEGenerate[0].description} 
 
 ## Installation
 
 Please follow the instructions below:
-${readMEGenerate.description} 
+${readMEGenerate[0].installation} 
 
 
 ## Usage
 
 Please follow the instructions below:
 
-
+${readMEGenerate[0].usage} 
 
 ## License
 
-MIT License
+ ${readMEGenerate[0].license} License
 
 ## Contributions
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
+${readMEGenerate[0].contributions}
 ## Tests
 
 Please follow the instructions below:
+${readMEGenerate[0].tests}
 
 
 ## Questions
 
-- Please contact me on my email: myemail@email.com
+- Please contact me on my email: ${readMEGenerate[0].email}
 
-- Visit my GitHub profile [here](https://github.com/amirtha-coder)
+- Visit my GitHub profile [here](https://github.com/${readMEGenerate[0].username})
 `;
 
   fs.writeFileSync("GENERATED_README.md", readME);
