@@ -5,9 +5,9 @@
  https://opensource.org/licenses/MIT
 -->
 
-Project Title ![MIT](https://img.shields.io/badge/MIT-License-green)
+# PROJECT-TITLE ![MIT](https://img.shields.io/badge/MIT-License-green)
 
-## Table of Contents
+## Contents Table
 
 - [Description](#description)
 - [Installation](#installation)
@@ -55,6 +55,6 @@ npm run test
 
 ## Questions
 
-Please contact me on my email: myemail@email.com
+- Please contact me on my email: myemail@email.com
 
-Visit my GitHub profile [here](https://github.com/amirtha-coder)
+- Visit my GitHub profile [here](https://github.com/amirtha-coder)
