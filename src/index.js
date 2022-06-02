@@ -9,7 +9,31 @@ console.log("hello from Node JS");
 const inquirer = require("inquirer");
 
 // declare questions
-const questions = () => {};
+const questions = [
+  {
+    type: "input",
+    message: "Please enter a description",
+    name: "description",
+  },
+  {
+    type: "input",
+    message: "Please enter how to install",
+    name: "installation",
+  },
+  {
+    type: "input",
+    message: "Please enter how to use",
+    name: "usage",
+  },
+  {},
+  {
+    type: "input",
+    message: "Please enter who has contributed",
+    name: "contributions",
+  },
+  {},
+  {},
+];
 
 // prompt questions
 const init = (async) => {};
