@@ -67,37 +67,33 @@ const questions = [
     name: "username",
   },
 ];
-
+const getBadgeURL = (license) => {
+  switch (license) {
+    case "MIT":
+      return "https://img.shields.io/badge/MIT-License-green";
+    case "Apache 2.0":
+      return "https://img.shields.io/badge/Apache2.0-License-green";
+    case "BSD 3-Clause":
+      return "https://img.shields.io/badge/BSD3-Clause-License";
+    case "BSD 2-Clause":
+      return "https://img.shields.io/badge/BSD2-Clause-License";
+    case "GNU General Public":
+      return "https://img.shields.io/badge/GNU%20General%20PublicLicense-green";
+    case "Mozilla Public 2.0":
+      return "https://img.shields.io/badge/Mozilla%Public%20Public%20Clause-License-green";
+  }
+};
 // prompt questions
 const init = async () => {
   // prompt questions to get answers
-  const readMEGenerate = [];
-  const {
-    title,
-    description,
-    installation,
-    usage,
-    license,
-    contributions,
-    tests,
-    email,
-    username,
-  } = await inquirer.prompt(questions);
 
-  readMEGenerate.push({
-    title,
-    description,
-    installation,
-    usage,
-    license,
-    contributions,
-    tests,
-    email,
-    username,
-  });
-  console.log(readMEGenerate);
+  const answers = await inquirer.prompt(questions);
 
-  const readME = `#${readMEGenerate[0].title}![MIT](https://img.shields.io/badge/${readMEGenerate[0].license}-License-green)
+  console.log(answers);
+
+  const readME = `# ${answers.title} ![${answers.license} badge](${getBadgeURL(
+    answers.license
+  )})
 
 ## Contents Table
 
@@ -111,38 +107,41 @@ const init = async () => {
 
 ## Description
 
-${readMEGenerate[0].description} 
+${answers.description} 
 
 ## Installation
 
 Please follow the instructions below:
-${readMEGenerate[0].installation} 
-
+\`\`\`
+${answers.installation} 
+\`\`\`
 
 ## Usage
 
 Please follow the instructions below:
-
-${readMEGenerate[0].usage} 
+\`\`\`
+${answers.usage} 
+\`\`\`
 
 ## License
 
- ${readMEGenerate[0].license} License
+ ${answers.license} License
 
 ## Contributions
 
-${readMEGenerate[0].contributions}
+${answers.contributions}
 ## Tests
 
 Please follow the instructions below:
-${readMEGenerate[0].tests}
-
+\`\`\`
+${answers.tests}
+\`\`\`
 
 ## Questions
 
-- Please contact me on my email: ${readMEGenerate[0].email}
+- Please contact me on my email: ${answers.email}
 
-- Visit my GitHub profile [here](https://github.com/${readMEGenerate[0].username})
+- Visit my GitHub profile [here](https://github.com/${answers.username})
 `;
 
   fs.writeFileSync("GENERATED_README.md", readME);
