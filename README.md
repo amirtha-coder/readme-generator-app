@@ -28,6 +28,12 @@ npm run start
 
 ## Screenshots
 
+### [Screenshot 1](./images/Readme1.png)
+
+### [Screenshot 2](./images/Readme2.png)
+
+### [Screenshot 3](./images/Readme3.png)
+
 ## Contact Me
 
 Email me at amirtha.m.muthirulandi@gmail.com
