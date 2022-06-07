@@ -4,9 +4,11 @@ A README.md generator for devs to quickly implement into a new project achieved 
 
 # PROJECT TITLE
 
-## Description
+## Demonstration Video
 
----
+Please click ![here](https://www.loom.com/share/dfbf44aff6d44e35a07b2e351537312e) to view.
+
+## Description
 
 ## Installation
 
@@ -24,9 +26,7 @@ npm install
 npm run start
 ```
 
-## Screenshots or Video Links
-
-screenshots
+## Screenshots
 
 ## Contact Me
 
